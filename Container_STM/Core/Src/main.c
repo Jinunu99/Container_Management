@@ -289,15 +289,7 @@ int main(void)
 			else if(dht1.temperature < dht_thr.T1 - 2) // 온도가 경계값보다 낮은가?
 			{
 				PINWHEEL_off(); // 선풍기 off
-//				static uint8_t cnt = 0;
-//				cnt++;
-//				if(cnt == 2)
-//				{
-//					cnt = 0;
-//					led_step = (led_step % 4) + 1;  // 1단 ~ 4단
-//
-//					LED1_on(led_step); // LED ON (히터)
-//				}
+
 				if(second_FLAG != led_update_time)
 				{
 					led_update_time = second_FLAG; // 현재의 초로 초기화
@@ -312,8 +304,6 @@ int main(void)
 				PINWHEEL_off(); // 선풍기 off
 				led_step = 0;
 			}
-
-
 
 			// 습도
 			if(dht1.humidity > dht_thr.H1 + 10)
@@ -332,50 +322,9 @@ int main(void)
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, RESET); // 가습기 OFF
 			}
 
-
 			LED2_off();
 			dht_readFLAG = 0; // 새로운 온습도 값을 받아올 수 있게
 		}
-
-
-
-		// 가습기 센서
-//		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, SET);
-//		HAL_Delay(1000);
-//		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, RESET);
-//		HAL_Delay(1000);
-
-
-		// bar LED (원하는 단수 입력{1단, 2단, 3단, 4단}) - 0단은 off
-//		for(uint8_t i=1; i<=4; i++)
-//		{
-//			LED1_on(i);
-//			HAL_Delay(500);
-//			LED2_on(i);
-//			HAL_Delay(500);
-//		}
-		//LED1_off();
-		//HAL_Delay(500);
-		//LED2_off();
-		//HAL_Delay(500);
-
-
-
-		// 선풍기
-//		PINWHEEL_on();
-//		HAL_Delay(2000);
-//		PINWHEEL_off();
-//		HAL_Delay(2000);
-
-
-		// FAN
-//		FAN_on();
-//		HAL_Delay(2000);
-//		FAN_off();
-//		HAL_Delay(2000);
-
-
-
 
 		if(trans_FLAG)
 		{
