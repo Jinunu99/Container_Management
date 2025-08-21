@@ -5,10 +5,11 @@
 <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white"> <img src="https://img.shields.io/badge/raspberrypi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white">
 
 ## 개요
-컨테이너 운송 과정에서 기후 변화에 따라 컨테이너 내부의 온도, 습도를 일정하게 유지하여 운송 물품의 품질과 안전을 확보하기 위한 시스템
-
+선박 운송 과정에서 컨테이너 내부의 온습도를 일정하게 유지하기 위해 FAN과 히터를 통해 관리할 수 있는 시스템 개발,  
+관리자가 내부 상황을 모니터링 할 수 있도록 GUI 개발  
+  
 * 개발 기간 : 2025.04.08 ~ 05.07
-* 프로젝트 인원 : 4명
+* 프로젝트 인원 : 3명
 
 ## 프로젝트 핵심기능
 `Container_STM`  
@@ -20,7 +21,7 @@
 * 수신된 센서 정보를 GUI에 시각화
 * 관리자가 상황에 따라 컨테이너의 내부 온습도를 조절할 수 있도록 온습도 경계값 송신함 
 
-## FlowChart
+## STM FlowChart
 <img width="662" height="471" alt="Image" src="https://github.com/user-attachments/assets/f84adbc4-ba2a-49e4-85c4-32fba5383f28" />
 
 ## GUI
